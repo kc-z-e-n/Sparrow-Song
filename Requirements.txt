@@ -1,0 +1,38 @@
+# Core
+numpy~=1.26
+pandas~=2.2
+scipy~=1.11
+numba~=0.59
+statsmodels~=0.14
+
+# Data + viz
+yfinance~=0.2
+matplotlib~=3.8
+plotly~=5.22
+
+# Backtesting / research
+vectorbt>=0.24
+backtrader>=1.9.78.123
+alphalens-reloaded>=0.4.3
+
+# ML
+scikit-learn~=1.4
+xgboost~=2.0
+lightgbm~=4.2
+umap-learn~=0.5.6
+optuna~=3.6
+shap~=0.45
+
+# Portfolio construction
+PyPortfolioOpt~=1.5
+
+# Technical indicators
+ta~=0.11.0
+# TA-Lib (C-lib) is optional but faster. Install system lib first then:
+# TA-Lib==0.4.28
+
+# Dev tooling
+pre-commit~=3.7
+ruff~=0.5
+nbqa~=1.8
+ipykernel~=6.29
