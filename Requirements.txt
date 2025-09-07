@@ -9,6 +9,8 @@ statsmodels~=0.14
 yfinance~=0.2
 matplotlib~=3.8
 plotly~=5.22
+pyarrow~=16.1
+exchange-calendars~=4.5
 
 # Backtesting / research
 vectorbt>=0.24

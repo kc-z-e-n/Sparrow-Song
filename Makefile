@@ -51,3 +51,16 @@ nbformat:
 clean:
 	@find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	@find . -type d -name ".pytest_cache" -exec rm -rf {} + 2>/dev/null || true
+
+data:
+	$(PYBIN) -m src.data.ingest --config config/settings.yaml
+
+validate:
+	$(PYBIN) scripts/validate_data.py
+
+update:        # same as data for now
+	$(PYBIN) -m src.data.ingest --config config/settings.yaml
+
+rebuild:       # wipe processed & rebuild from raw, does not fetch new data
+	rm -f data/processed/*.parquet
+	$(PYBIN) -m src.data.ingest --config config/settings.yaml

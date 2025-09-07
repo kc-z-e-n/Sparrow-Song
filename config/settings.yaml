@@ -1,0 +1,22 @@
+# Data source & universe
+source: yfinance
+tickers: [SPY, AAPL, MSFT]
+
+# Date range (ISO). Leave end blank for “today”.
+start: "2015-01-01"
+end: ""
+
+# Bars
+interval: "1d"         # yfinance: 1d, 1h, 5m, ...
+calendar: "B"          # align to pandas BusinessDay
+# calendar: "XNYS" # NYSE sessions (needs exchange-calendars)
+# calendar: "AUTO" # union of dates actually present across all tickers
+ffill_limit: 5         # how many missing days we allow to forward-fill
+
+# Output
+paths:
+  raw: "data/raw/yfinance"
+  processed: "data/processed"
+
+# Columns to save in processed parquet (lowercase)
+columns: [open, high, low, close, adj_close, volume, ret_1d]
